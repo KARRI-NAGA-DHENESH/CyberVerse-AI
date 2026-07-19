@@ -58,9 +58,9 @@ function clearHistory() {
     setOtxData(null);
 
     try {
-      const response = await fetch(
-        `http://localhost:5000/api/threat/${ip}`
-      );
+  const response = await fetch(
+    `${import.meta.env.VITE_BACKEND_API}/api/threat/${ip}`
+  );
 
       const data = await response.json();
 

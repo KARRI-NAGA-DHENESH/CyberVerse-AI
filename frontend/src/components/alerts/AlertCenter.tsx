@@ -30,7 +30,7 @@ function AlertCenter() {
 
 useEffect(() => {
   const fetchAlerts = () => {
-    fetch("http://localhost:5000/api/alerts")
+    fetch(`${import.meta.env.VITE_BACKEND_API}/api/alerts`)
       .then((res) => res.json())
       .then((data) => {
         setAlerts(data.alerts);

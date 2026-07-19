@@ -23,7 +23,7 @@ function LiveAttackFeed() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/attacks")
+    fetch(`${import.meta.env.VITE_BACKEND_API}/api/attacks`)
       .then((res) => res.json())
       .then((data) => {
         setAttacks(data.attacks);

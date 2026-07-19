@@ -5,7 +5,7 @@ function IncidentDetails() {
   const { selectedAlert } = useAlert();
   const [incidents, setIncidents] = useState<any[]>([]);
   useEffect(() => {
-  fetch("http://localhost:5000/api/incidents")
+  fetch(`${import.meta.env.VITE_BACKEND_API}/api/incidents`)
     .then((res) => res.json())
     .then((data) => {
       setIncidents(data.incidents);
