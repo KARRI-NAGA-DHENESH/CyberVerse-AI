@@ -16,13 +16,14 @@ function SOCAlert() {
       : "border-green-500 text-green-400";
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       <motion.div
         key={selectedAttack.id}
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className={`rounded-2xl border ${severityColor} bg-[#07111F] p-5 shadow-lg`}
+        transition={{ duration: 0.3 }}
+        className={`rounded-2xl border ${severityColor} bg-[#07111F] p-5 shadow-lg min-h-[120px]`}
       >
         <div className="flex justify-between items-center">
           <div>
@@ -34,23 +35,14 @@ function SOCAlert() {
               {selectedAttack.name}
             </p>
 
-            <p className="text-gray-400 mt-1">
+            <p className="mt-1 text-gray-400">
               {selectedAttack.source} → {selectedAttack.target}
             </p>
           </div>
 
-          <motion.div
-            animate={{
-              scale: [1, 1.15, 1],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 1,
-            }}
-            className="text-5xl"
-          >
+          <div className="text-5xl">
             ⚠️
-          </motion.div>
+          </div>
         </div>
       </motion.div>
     </AnimatePresence>
