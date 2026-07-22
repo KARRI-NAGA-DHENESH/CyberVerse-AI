@@ -106,8 +106,8 @@ const liveAttackText = latestAttack
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(circle at center, rgba(0,229,255,.22), transparent 70%)",
-          filter: "blur(70px)",
+  "radial-gradient(circle at center, rgba(0,229,255,.08), transparent 70%)",
+filter: "blur(40px)",
         }}
         animate={{
           opacity: [0.35, 0.7, 0.35],
@@ -124,17 +124,15 @@ const liveAttackText = latestAttack
         src={worldMap}
         alt="CyberVerse World Map"
         className="absolute inset-0 h-full w-full object-contain"
-        style={{
-          opacity: 0.96,
-          filter: `
-            brightness(1.15)
-            contrast(1.25)
-            saturate(1.25)
-            drop-shadow(0 0 18px rgba(0,229,255,.9))
-            drop-shadow(0 0 40px rgba(0,229,255,.45))
-            drop-shadow(0 0 80px rgba(0,229,255,.25))
-          `,
-        }}
+       style={{
+  opacity: 0.65,
+  filter: `
+    brightness(0.65)
+    contrast(0.95)
+    saturate(0.7)
+    drop-shadow(0 0 4px rgba(0,229,255,.25))
+  `,
+}}
         animate={{
           opacity: [0.92, 1, 0.92],
           scale: [1, 1.01, 1],
