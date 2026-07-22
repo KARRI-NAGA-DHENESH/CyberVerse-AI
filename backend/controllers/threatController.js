@@ -3,29 +3,36 @@ const { lookupAbuseIPDB } = require("../services/abuseIPDBService");
 const { lookupOTX } = require("../services/otxService");
 
 async function lookupThreat(req, res) {
+  const { ip } = req.params;
+
+  let virusTotal = null;
+  let abuseIPDB = null;
+  let otx = null;
+
   try {
-    const { ip } = req.params;
-
-    const [virusTotal, abuseIPDB, otx] = await Promise.all([
-      lookupVirusTotal(ip),
-      lookupAbuseIPDB(ip),
-      lookupOTX(ip),
-    ]);
-
-    res.json({
-      success: true,
-      virusTotal,
-      abuseIPDB,
-      otx,
-    });
+    virusTotal = await lookupVirusTotal(ip);
   } catch (error) {
-    console.error(error.response?.data || error.message);
-
-    res.status(500).json({
-      success: false,
-      error: "Threat lookup failed",
-    });
+    console.error("VirusTotal Error:", error.message);
   }
+
+  try {
+    abuseIPDB = await lookupAbuseIPDB(ip);
+  } catch (error) {
+    console.error("AbuseIPDB Error:", error.message);
+  }
+
+  try {
+    otx = await lookupOTX(ip);
+  } catch (error) {
+    console.error("OTX Error:", error.message);
+  }
+
+  res.json({
+    success: true,
+    virusTotal,
+    abuseIPDB,
+    otx,
+  });
 }
 
 module.exports = {

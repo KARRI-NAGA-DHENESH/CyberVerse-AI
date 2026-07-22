@@ -33,7 +33,7 @@ useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_API}/api/alerts`)
       .then((res) => res.json())
       .then((data) => {
-        setAlerts(data.alerts);
+        setAlerts(data.alerts.slice(0, 3));
       })
       .catch((err) => {
         console.error("Failed to load alerts:", err);
@@ -135,7 +135,7 @@ useEffect(() => {
 
       </div>
 
-      <div className="max-h-[500px] space-y-4 overflow-y-auto">
+      <div className="max-h-[300px] space-y-4 overflow-y-auto">
                 {filteredAlerts.length === 0 ? (
 
           <div className="rounded-xl border border-cyan-500/10 bg-[#0B1628] p-8 text-center">
