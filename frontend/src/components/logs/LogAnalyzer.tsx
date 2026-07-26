@@ -96,12 +96,23 @@ ${logText}
 
       const result = await askGemini(prompt);
 
-      const cleaned = result
-        .replace(/```json/g, "")
-        .replace(/```/g, "")
-        .trim();
+// Remove markdown code fences
+const cleaned = result
+  .replace(/```json/gi, "")
+  .replace(/```/g, "")
+  .trim();
 
-      const data = JSON.parse(cleaned);
+// Extract only the JSON object
+const start = cleaned.indexOf("{");
+const end = cleaned.lastIndexOf("}");
+
+if (start === -1 || end === -1) {
+  throw new Error("No JSON found in Gemini response");
+}
+
+const jsonString = cleaned.substring(start, end + 1);
+
+const data = JSON.parse(jsonString);
 
       setAttackType(data.attackType || "Unknown");
 
@@ -165,14 +176,14 @@ ${logText}
         },
       ]);
 
-      setResponse(cleaned);
-    } catch (error) {
-      console.error(error);
+      setResponse(JSON.stringify(data, null, 2));
+    } catch (error: any) {
+  console.error("Gemini Error:", error);
 
-      setResponse(
-        "❌ Gemini returned an invalid JSON response.\nPlease try again."
-      );
-    }
+  setResponse(
+    `❌ AI Analysis Failed\n\n${error.message}\n\nPlease try again.`
+  );
+}
 
     setLoading(false);
   }
