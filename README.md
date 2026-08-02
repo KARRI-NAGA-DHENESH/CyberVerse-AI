@@ -46,6 +46,17 @@ The application combines AI-powered analysis, threat intelligence, security visu
 
 ---
 
+## 🌟 Project Highlights
+
+- 🤖 AI-powered cybersecurity assistant
+- 🛡 Detects phishing and malware threats
+- 📄 Intelligent security log analysis
+- 🌐 CVE and Threat Intelligence integration
+- 📊 Interactive analytics dashboard
+- 📑 AI-generated incident reports
+- ⚡ Modern React + TypeScript interface
+- 🚀 Live deployed application
+
 # ✨ Features
 
 ### 🛡 Threat Detection
@@ -106,6 +117,32 @@ The application combines AI-powered analysis, threat intelligence, security visu
 - Incident Report Generator
 
 ---
+
+# 🏗 Architecture
+
+```text
+                👤 User
+                   │
+                   ▼
+        React + TypeScript Frontend
+                   │
+                   ▼
+          AI Security Modules
+     ┌───────────────────────────┐
+     │ 🤖 AI Copilot             │
+     │ 📄 Log Analyzer           │
+     │ 🦠 Malware Classifier     │
+     │ 🎣 Phishing Detector      │
+     │ 🌐 Threat Intelligence    │
+     │ 📑 Incident Reports       │
+     └───────────────────────────┘
+                   │
+                   ▼
+            Google Gemini AI
+                   │
+                   ▼
+          Analysis & Recommendations
+```
 
 # 🛠️ Tech Stack
 
