@@ -24,6 +24,19 @@
 </p>
 
 ---
+## 📑 Table of Contents
+
+- [🚀 Overview](#-overview)
+- [✨ Features](#-features)
+- [🏗 System Modules](#-system-modules)
+- [🛠 Tech Stack](#-tech-stack)
+- [📂 Project Structure](#-project-structure)
+- [⚙️ Installation](#️-installation)
+- [💻 Usage](#-usage)
+- [📸 Screenshots](#-screenshots)
+- [🎯 Future Improvements](#-future-improvements)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ## 🚀 Overview
 
@@ -117,7 +130,14 @@ The application combines AI-powered analysis, threat intelligence, security visu
 - GitHub
 
 ---
+<p align="center">
 
+![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet?style=flat-square)
+![Cyber Security](https://img.shields.io/badge/Cyber-Security-red?style=flat-square)
+![Threat Detection](https://img.shields.io/badge/Threat-Detection-orange?style=flat-square)
+![Open Source](https://img.shields.io/badge/Open-Source-success?style=flat-square)
+
+</p>
 # 📂 Project Structure
 
 ```text
