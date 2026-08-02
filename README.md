@@ -166,10 +166,59 @@ npm run dev
 
 # 📸 Screenshots
 
-> Add screenshots inside a folder named:
+## Dashboard
 
-```text
-assets/screenshots/
+<p align="center">
+  <img src="assets/screenshots/dashboard.png" width="900">
+</p>
+
+---
+
+## AI Copilot
+
+<p align="center">
+  <img src="assets/screenshots/ai-copilot.png" width="900">
+</p>
+
+---
+
+## Log Analyzer
+
+<p align="center">
+  <img src="assets/screenshots/log-analyzer.png" width="900">
+</p>
+
+---
+
+## Threat Intelligence
+
+<p align="center">
+  <img src="assets/screenshots/threat-intelligence.png" width="900">
+</p>
+
+---
+
+## Malware Classifier
+
+<p align="center">
+  <img src="assets/screenshots/malware-classifier.png" width="900">
+</p>
+
+---
+
+## Phishing Detector
+
+<p align="center">
+  <img src="assets/screenshots/phishing-detector.png" width="900">
+</p>
+
+---
+
+## Incident Report
+
+<p align="center">
+  <img src="assets/screenshots/incident-report.png" width="900">
+</p>
 ```
 
 Example:
