@@ -166,70 +166,59 @@ npm run dev
 
 # 📸 Screenshots
 
-## Dashboard
+## 🏠 Dashboard
 
 <p align="center">
-  <img src="assets/screenshots/dashboard.png" width="900">
+  <img src="frontend/src/assets/screenshots/dashboard.png" width="900" alt="Dashboard">
 </p>
 
 ---
 
-## AI Copilot
+## 🤖 AI Copilot
 
 <p align="center">
-  <img src="assets/screenshots/ai-copilot.png" width="900">
+  <img src="frontend/src/assets/screenshots/ai-copilot.png" width="900" alt="AI Copilot">
 </p>
 
 ---
 
-## Log Analyzer
+## 📄 Log Analyzer
 
 <p align="center">
-  <img src="assets/screenshots/log-analyzer.png" width="900">
+  <img src="frontend/src/assets/screenshots/log-analyzer.png" width="900" alt="Log Analyzer">
 </p>
 
 ---
 
-## Threat Intelligence
+## 🌐 Threat Intelligence
 
 <p align="center">
-  <img src="assets/screenshots/threat-intelligence.png" width="900">
+  <img src="frontend/src/assets/screenshots/threat-intelligence.png" width="900" alt="Threat Intelligence">
 </p>
 
 ---
 
-## Malware Classifier
+## 🦠 Malware Classifier
 
 <p align="center">
-  <img src="assets/screenshots/malware-classifier.png" width="900">
+  <img src="frontend/src/assets/screenshots/malware-classifier.png" width="900" alt="Malware Classifier">
 </p>
 
 ---
 
-## Phishing Detector
+## 🎣 Phishing Detector
 
 <p align="center">
-  <img src="assets/screenshots/phishing-detector.png" width="900">
+  <img src="frontend/src/assets/screenshots/phishing-detector.png" width="900" alt="Phishing Detector">
 </p>
 
 ---
 
-## Incident Report
+## 📑 Incident Report
 
 <p align="center">
-  <img src="assets/screenshots/incident-report.png" width="900">
+  <img src="frontend/src/assets/screenshots/incident-report.png" width="900" alt="Incident Report">
 </p>
-```
-
-Example:
-
-- Dashboard
-- Threat Intelligence
-- AI Copilot
-- Log Analyzer
-- Malware Detection
-- Incident Report
-
 ---
 
 # 🎯 Future Improvements
