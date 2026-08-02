@@ -1,4 +1,19 @@
 <h1 align="center">🛡️ CyberVerse-AI</h1>
+<p align="center">
+
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_Project-success?style=for-the-badge)](https://cyber-threat-detection-theta.vercel.app)
+
+</p>
+
+<p align="center">
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-green)
+
+</p>
 
 <p align="center">
   <b>AI-Powered Cyber Threat Detection & Security Analysis Platform</b>
