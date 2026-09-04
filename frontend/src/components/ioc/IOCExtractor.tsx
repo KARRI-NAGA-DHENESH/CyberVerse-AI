@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { askGemini } from "../../services/gemini";
 import { buildIOCList } from "../../utils/iocExport";
+import { saveRiskSignals } from "../../services/riskSignalService";
 
 function IOCExtractor() {
   const [text, setText] = useState("");
@@ -30,6 +31,15 @@ function IOCExtractor() {
     urls.length +
     emails.length +
     totalHashes;
+
+    const threatExposure = Math.min(
+  100,
+  totalIOCs * 10
+);
+
+saveRiskSignals({
+  threatExposure,
+});
 
   async function extractIOCs() {
     setLoading(true);

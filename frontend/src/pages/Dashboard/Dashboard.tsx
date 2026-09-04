@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { lazy } from "react";
+import { Link } from "react-router-dom"; 
 
 import DashboardLayout from "../../components/layout/DashboardLayout";
 
@@ -120,6 +121,13 @@ function Dashboard() {
       Real-time cyber threat detection, AI-powered incident investigation,
       global threat intelligence, and enterprise SOC monitoring.
     </p>
+
+    <Link
+  to="/cyber-risk"
+  className="mt-6 inline-flex items-center rounded-xl border border-cyan-400/30 bg-cyan-500/10 px-5 py-3 font-semibold text-cyan-300 transition hover:bg-cyan-500/20 hover:text-cyan-200"
+>
+  🛡️ Cyber Risk & Investment Center
+</Link>
 
   </div>
 

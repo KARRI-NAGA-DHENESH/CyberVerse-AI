@@ -23,6 +23,11 @@ const MachineLearning = lazy(
   () => import("./pages/machinelearning/MachineLearning")
 );
 
+// Cyber Risk & Investment Center
+const CyberRiskCenter = lazy(
+  () => import("./components/CyberRiskCenter/CyberRiskCenter")
+);
+
 function App() {
   return (
     <BrowserRouter>
@@ -65,6 +70,12 @@ function App() {
           <Route
             path="/threatlookup"
             element={<ThreatLookup />}
+          />
+
+          {/* Cyber Risk & Investment Center */}
+          <Route
+            path="/cyber-risk"
+            element={<CyberRiskCenter />}
           />
 
         </Routes>

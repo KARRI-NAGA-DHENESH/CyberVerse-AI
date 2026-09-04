@@ -10,6 +10,7 @@ import AttackTimeline from "./AttackTimeline";
 import SecurityChart from "../charts/SecurityChart";
 
 import { generatePDF } from "../../utils/pdfReport";
+import { saveRiskSignals } from "../../services/riskSignalService";
 
 function LogAnalyzer() {
   const [logText, setLogText] = useState("");
@@ -124,8 +125,28 @@ const data = JSON.parse(jsonString);
           | "Low") || "Low"
       );
 
-      setRiskScore(data.riskScore || "0.0");
-      setMitre(data.mitre || "N/A");
+      const parsedRiskScore = Number.parseFloat(
+  String(data.riskScore || "").replace(/[^0-9.]/g, "")
+);
+
+setRiskScore(data.riskScore || "0.0");
+
+if (Number.isFinite(parsedRiskScore)) {
+  const attackActivity = Math.min(
+    100,
+    Math.max(0, parsedRiskScore)
+  );
+
+  saveRiskSignals({
+    attackActivity,
+  });
+}
+
+      setMitre(
+  typeof data.mitre === "string"
+    ? data.mitre
+    : JSON.stringify(data.mitre || {})
+);
       setSummary(data.summary || "");
       setRecommendation(data.recommendation || "");
 

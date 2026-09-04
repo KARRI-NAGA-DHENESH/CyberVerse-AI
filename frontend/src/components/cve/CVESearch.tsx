@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { askGemini } from "../../services/gemini";
+import { saveRiskSignals } from "../../services/riskSignalService";
 
 function CVESearch() {
   const [query, setQuery] = useState("");
@@ -78,6 +79,22 @@ ${query}
         .trim();
 
       const data = JSON.parse(cleaned);
+
+      const parsedCvss = Number.parseFloat(
+  String(data.cvss || "").replace(/[^0-9.]/g, "")
+);
+
+if (Number.isFinite(parsedCvss)) {
+  const vulnerabilityRisk = Math.round(
+    Math.min(10, Math.max(0, parsedCvss)) * 10
+  );
+
+  saveRiskSignals({
+    vulnerabilityRisk,
+    vulnerabilitySource: query,
+    cvss: parsedCvss,
+  });
+}
 
       setSeverity(data.severity || "");
 

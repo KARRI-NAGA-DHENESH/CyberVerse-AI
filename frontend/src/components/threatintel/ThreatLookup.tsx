@@ -7,6 +7,7 @@ import ThreatGauge from "./ThreatGauge";
 import KPICard from "./KPICard";
 
 import { generateThreatReport } from "../../utils/pdfReport";
+import { saveRiskSignals } from "../../services/riskSignalService";
 
 function ThreatLookup() {
   const [ip, setIp] = useState("");
@@ -95,6 +96,10 @@ const score = Math.min(
     (abuse?.abuseConfidenceScore ?? 0) +
     pulseCount * 2
 );
+
+saveRiskSignals({
+  threatExposure: score,
+});
 
 setHistory((prev) =>
   [
